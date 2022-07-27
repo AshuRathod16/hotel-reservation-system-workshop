@@ -3,17 +3,21 @@ package com.bridgelabz;
 import java.util.ArrayList;
 
 public class HotelReservationService {
+
+    // Main method
     public static void main(String[] args) {
-        System.out.println("Welcome to Hotel Management Service");
+        System.out.println("Welcome to Hotel Reservation Service");
 
-        ArrayList<Hotel> hotelArrayList = new ArrayList<>();
-        Hotel hotel = new Hotel("Lakewood", 1, 110, 90);
-        Hotel hotel1 = new Hotel("Bridgewood", 2, 160, 60);
-        Hotel hotel2 = new Hotel("Ridgewood", 3, 220, 150);
+        ArrayList<Hotel> hotelList = new ArrayList<>();
+        Hotel hotel  = new Hotel("Lakewood", 110.0);
+        Hotel hotel1 = new Hotel("Bridgewood", 160.0);
+        Hotel hotel2 = new Hotel("Ridgewood", 220.0);
 
-        hotelArrayList.add(hotel);
-        hotelArrayList.add(hotel1);
-        hotelArrayList.add(hotel2);
-        System.out.println(hotelArrayList);
+        hotelList.add(hotel);
+        hotelList.add(hotel1);
+        hotelList.add(hotel2);
+        System.out.println(hotelList);
     }
 }
+
+
