@@ -9,6 +9,22 @@ public class Hotel {
         this.hotelRates = hotelRates;
     }
 
+    public String getHotelName() {
+        return hotelName;
+    }
+
+    public void setHotelName(String hotelName) {
+        this.hotelName = hotelName;
+    }
+
+    public Double getHotelRates() {
+        return hotelRates;
+    }
+
+    public void setHotelRates(Double hotelRates) {
+        this.hotelRates = hotelRates;
+    }
+
     @Override
     public String toString() {
         return "Hotel{" +
