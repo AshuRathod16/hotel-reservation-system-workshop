@@ -2,16 +2,14 @@ package com.bridgelabz;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static java.time.LocalDate.*;
-import static java.time.format.DateTimeFormatter.*;
+
 
 public class HotelReservationService {
     static List<Hotel> hotelList = new ArrayList<>();
+    static List<Hotel> specialHotelList = new LinkedList<>();
 
 
     // Main method
@@ -27,6 +25,14 @@ public class HotelReservationService {
         hotelList.add(ridgewood);
         hotelList.forEach(System.out::println);
         System.out.println(" ");
+        System.out.println("Special rates for reward customers are: ");
+        Hotel lakewoodReward = new Hotel("Lakewood", 80, 80, 160, 3);
+        Hotel bridgewoodReward = new Hotel("Bridgewood", 110, 50, 160, 4);
+        Hotel ridgewoodReward = new Hotel("Ridgewood", 100, 40, 150, 5);
+        specialHotelList.add(lakewoodReward);
+        specialHotelList.add(bridgewoodReward);
+        specialHotelList.add(ridgewoodReward);
+        specialHotelList.forEach(System.out::println);
         cheapestHotelForWeekDays("2022-01-02", "2022-01-03");
         cheapestHotelForWeekend("2020-09-11", "2020-09-12");
         cheapestBestRatedHotel("2020-09-11", "2020-09-12");
